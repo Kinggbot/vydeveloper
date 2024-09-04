@@ -3,54 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang web của tôi</title>
+    <title>Trang Chủ Giống Facebook</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Chào mừng đến với trang web của tôi!</h1>
-    <p>Đây là một trang web đơn giản sử dụng GitHub Pages.</p>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>FPS Counter</title>
-    <style>
-        #fpsCounter {
-            position: fixed;
-            top: 10px;
-            left: 10px;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 5px;
-            border-radius: 3px;
-            font-family: Arial, sans-serif;
-        }
-    </style>
-</head>
-<body>
-    <div id="fpsCounter">FPS: 0</div>
-
-    <script>
-        let fpsCounter = document.getElementById('fpsCounter');
-        let frameCount = 0;
-        let lastTime = performance.now();
-        
-        function updateFPS() {
-            const now = performance.now();
-            frameCount++;
-            const elapsed = now - lastTime;
-
-            if (elapsed > 1000) {
-                const fps = Math.round((frameCount / elapsed) * 1000);
-                fpsCounter.textContent = `FPS: ${fps}`;
-                frameCount = 0;
-                lastTime = now;
-            }
-            
-            requestAnimationFrame(updateFPS);
-        }
-        
-        updateFPS();
-    </script>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>MyFacebook</h1>
+            </div>
+            <nav>
+                <a href="#">Trang chủ</a>
+                <a href="#">Tin tức</a>
+                <a href="#">Bạn bè</a>
+                <a href="#">Tin nhắn</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">
+            <aside>
+                <h2>Thông tin cá nhân</h2>
+                <ul>
+                    <li><a href="#">Hồ sơ</a></li>
+                    <li><a href="#">Cài đặt</a></li>
+                    <li><a href="#">Đăng xuất</a></li>
+                </ul>
+            </aside>
+            <section>
+                <h2>Trang chủ</h2>
+                <div class="post">
+                    <h3>Người dùng A</h3>
+                    <p>Đây là một bài viết ví dụ.</p>
+                </div>
+                <div class="post">
+                    <h3>Người dùng B</h3>
+                    <p>Đây là một bài viết khác.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 MyFacebook</p>
+        </div>
+    </footer>
 </body>
 </html>
