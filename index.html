@@ -10,3 +10,49 @@
     <p>Đây là một trang web đơn giản sử dụng GitHub Pages.</p>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPS Counter</title>
+    <style>
+        #fpsCounter {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px;
+            border-radius: 3px;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="fpsCounter">FPS: 0</div>
+
+    <script>
+        let fpsCounter = document.getElementById('fpsCounter');
+        let frameCount = 0;
+        let lastTime = performance.now();
+        
+        function updateFPS() {
+            const now = performance.now();
+            frameCount++;
+            const elapsed = now - lastTime;
+
+            if (elapsed > 1000) {
+                const fps = Math.round((frameCount / elapsed) * 1000);
+                fpsCounter.textContent = `FPS: ${fps}`;
+                frameCount = 0;
+                lastTime = now;
+            }
+            
+            requestAnimationFrame(updateFPS);
+        }
+        
+        updateFPS();
+    </script>
+</body>
+</html>
