@@ -1,0 +1,188 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="_csrf" content="e48b6b60-26fd-4aaf-b284-16d1ad3bf246" />
+    <meta name="_csrf_header" content="X-CSRF-TOKEN" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:title"
+      content="Thanh toán hóa đơn dịch vụ NGUYEN DUC TIEN ANH"
+    />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="366" />
+    <!-- <meta property="og:image" content="https://evps.vn/wp-content/uploads/2023/03/giai-phap-cong-nghe-evps-1.png" />-->
+    <meta id="dynamic-meta" name="dynamic-id" content="" />
+    <link
+      href="https://my.4gtocdo.com/thanhtoan/dvsteam/api/logo/acb.jpg"
+      rel="SHORTCUT ICON"
+    />
+    <title>Quét mã QR thanh toán cho NGUYEN DUC TIEN ANH</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://api.spayment.vn/Scripts/sweetalert/sweetalert.min.js"></script>
+    <link
+      href="https://api.spayment.vn/Scripts/sweetalert/sweetalert.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
+    <link href="https://api.pay2s.vn/public/payment/assets/css/qr.css" rel="stylesheet" />
+    <link href="https://api.pay2s.vn/public/payment/assets/css/core.css" rel="stylesheet" />
+    <link href="https://api.pay2s.vn/public/payment/assets/css/payment.css" rel="stylesheet" />
+    <link href="https://api.pay2s.vn/public/payment/style.css" rel="stylesheet" />
+  </head>
+
+  <body class="d-flex flex-column justify-content-between">
+    <header>
+      <nav class="py-4">
+        <div class="container d-flex align-items-center">
+          <img
+z
+          </span>
+        </div>
+      </nav>
+    </header>    <div id="alert" class="mainContent mb-auto apply-bg-bidv">
+      <div class="container col-md-12 col-lg-12 col-xl-12 pt-4 pb-4">
+        <!-------------------------------------------------- CONTENT -------------------------------------------------->
+        <div class="dynamic-filter-list-container dynamic-filter-min-height">
+          <div
+            class="modal-background modal momoModal"
+            id="paymentModal"
+            role="dialog"
+            tabindex="-1"
+          >
+            <div
+              class="modal-instruction modal-dialog-centered w-75"
+              role="document"
+            ></div>
+          </div>
+          <!-------------------------------------------------- PAYMENT INFO -------------------------------------------------->
+         <div class="filter-content-box" style="display: block;">
+          <div class="header position-relative py-4">
+            <div class="d-flex align-items-center gap-4">
+              <img src="https://my.4gtocdo.com/thanhtoan/dvsteam/api/logo/acb.jpg" width="50">
+              <h5 class="title-method bidvbank">Cổng thanh toán qua Ngân hàng Á Châu - ACB</h5>
+            </div>
+            <div>
+            </div>
+          </div>
+          <div class="contentWapper_card bidv pt-1 pb-0 pb-0 d-flex gap-4 ">
+            <div class="mainCard cardLeft flex-grow-1 border rounded-3 p-3 p-md-4">
+              <p class="order-title fw-bold">Thông tin thanh toán</p>
+              <ul class="info-card-holder mt-3 mt-lg-4">
+                <li class="d-flex flex-column  gap-2">
+                  <p class="info-title">Nhà Cung Cấp </p>
+                  <div class="d-flex align-items-center gap-2">
+                    <img class="logo rounded py-3 px-2" src="https://my.4gtocdo.com/thanhtoan/dvsteam/api/logo/acb.jpg">
+                    <p class="content fw-semibold">Ngân Hàng ACB</p>
+                  </div>
+                </li>
+                <div class="line-detail"></div>
+                <li class="d-flex flex-column  gap-2">
+                  <p class="info-title">Họ và tên: </p>
+                  <p class="content fw-semibold">NGUYEN DUC TIEN ANH</p>
+                </li>
+                <div class="line-detail"></div>
+                <li class="d-flex flex-column  gap-2">
+                  <p class="info-title">Số tài khoản: </p>
+                  <div class="d-flex align-items-end justify-content-between gap-2">
+                    <p id="phoneCopy" class="content fw-semibold">0397399554</p>
+                    <button id="PhoneCopyBtn" data-clipboard-target="#phoneCopy" type="button" class="btn copyBtn" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"></button>
+                  </div>
+                </li>
+                <li class="mobile">
+                    <div class="text-center">
+                    <h6>Quét mã QR để thanh toán</h6>
+                  </div>
+                  <div class="qrcode_scan_container">
+                    <div class="qrcode_scan">
+                      <div class="qrcode_image">
+                        <img id="qrCodeImage" alt="paymentcode" class="image-qr-code" src="https://apiqr.web2m.com/api/generate/MBB/343419 /NGUYEN DUC TIEN ANH?amount=&memo=THANH TOAN DICH VU&is_mask=0&bg=0
+
+">
+                    </div>
+                  </div>
+                   <div class="text-center">
+            <button id="downloadQrCodeButton" class="btn copyBtn">Cap Màn Rồi Bank Nè</button>
+        </div>
+            </div></li>
+              </ul>
+            </div>
+            <div class="mainCard cardRight flex-grow-1 d-none d-md-block rounded-3 p-4 py-md-4 text-light">
+              <div class="qr-code col-lg-8">
+            <div class="payment-content" id="body-payment-content">
+              <div
+                class="payment-qr col-sm-7 mx-auto pb-0 pt-3 pb-3 text-white"
+              >
+                <div class="payment-cta p-0">
+                  <div>
+                    <h4>Quét mã QR để thanh toán</h4>
+                  </div>
+                  <div id="momo-mark" class="mx-auto pt-3"></div>
+                  <div class="qrcode_scan_container">
+                    <div class="qrcode_scan">
+                      <div class="qrcode_gradient">
+                        <img
+                          alt=""
+                          src="https://api.pay2s.vn/public/payment/assets/qrcode-gradient-ecfeda44ae2870718219b2046c4abe3e.png"
+                          loading="lazy"
+                          class="jsx-d22f6bd0771ae323 img-fluid"
+                        />
+                      </div>
+                      <div class="qrcode_border">
+                        <img
+                          alt=""
+                          src="https://api.pay2s.vn/public/payment/assets/border-qrcode-deab3eb55f9ef6d6a8d6d1b5b194b36c.svg"
+                          class="jsx-d22f6bd0771ae323 img-fluid"
+                        />
+                      </div>
+                      <div class="qrcode_image">
+                        <img
+                          alt="paymentcode"
+                          class="image-qr-code"
+                          src="https://apiqr.web2m.com/api/generate/ACB/42578207/NGUYEN DUC TIEN ANH?amount=&memo=Thanh Toan Dich Vu&is_mask=1&bg=0
+"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+              <p class="text-center col">
+                Sử dụng <b>ứng dụng Ngân hàng hoặc, điện tử</b> hoặc<br>
+                Camera hỗ trợ QR code để quét mã
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-------------------------------------------------- BANK CARDS -------------------------------------------------->
+        </div>
+        <!-------------------------------------------------- EXPIRE -------------------------------------------------->
+        <div class="expire-content mb-3">
+          <div class="box-expire p-3">
+            <div class="expire-text text-center">
+              <div id="thanhcong"></div>
+              <div id="hide_2">
+                <p
+                  class="m-0 d-flex flex-column flex-md-row justify-content-center align-items-center gap-md-2"
+                >
+                  Chuyển Khoản Chụp Bill Gửi Để Được Xác Nhận
+                  <span class="time-expire-text fw-medium fs-3" name="expiredAt"
+</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+
+          
